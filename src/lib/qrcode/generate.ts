@@ -1343,8 +1343,8 @@ class QRCode {
 			const QR_CODE_WIDTH_SIZE = this.options.width;
 			const QR_CODE_HEIGHT_SIZE = this.options.height;
 
-			const LOGO_WIDTH = (QR_CODE_WIDTH_SIZE * (this.options.logoWidth || 15)) / 100;
-			const LOGO_HEIGHT = (QR_CODE_HEIGHT_SIZE * (this.options.logoHeight || 15)) / 100;
+			const LOGO_WIDTH = (X_SIZE * ((this.options.logoWidth || 14))) - ((this.options.logoWidth ?? 14) % 2 == 0 ? X_SIZE : 0);
+			const LOGO_HEIGHT = (X_SIZE * (this.options.logoHeight || 14)) - ((this.options.logoHeight ?? 14) % 2 == 0 ? X_SIZE : 0);
 			const LOGO_PADDING = this.options.logoPadding || 5;
 			const LOGO_BACKGROUND_COLOR = this.options.logoBackgroundColor || this.options.backgroundColor;
 
